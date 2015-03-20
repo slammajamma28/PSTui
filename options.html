@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>PSTUi</title>
+    <link rel="stylesheet" href="options.css"/>
+    <script src="jquery-2.1.3.min.js"></script>
+    <script src="options.js"></script>
+</head>
+<body>
+
+<img src="icon.png" id="logo" alt=""/>
+
+<div class="divider"></div>
+
+<form>
+    <label for="content_width">Set Page Width:</label>
+    <input id="content_width" type="range" name="content_width" min="994" max="2560">
+    <input type="number" id="content_width_number" placeholder="Enter Desired Width Between 994 and 2560" min="994" max="2560"/>
+    <button id="content_width_reset">Reset</button>
+</form>
+
+<div class="divider"></div>
+
+<form>
+    <button type="submit" id="submit_form">Save Changes</button> &nbsp; <span id="status"></span>
+</form>
+
+</body>
+</html>

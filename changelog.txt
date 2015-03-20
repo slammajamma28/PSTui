@@ -1,0 +1,42 @@
+~~CHANGELOG~~
+
+V1.44
+- New feature: Character count for both quick reply and regular posts
+
+V1.43
+- Added new function: Clicking an image in a post will now open it in a lightbox
+
+V1.42
+- Went a bit too vague with V1.4 for the User page fix; narrowed it down
+
+V1.41
+- Adjusted the Private Messages functionality to work across the board properly, rather than just the "Check All" button
+
+V1.4
+- Adjusted placement of the Search bar
+- Overall improvements to main navigation styling
+- Added back the Login section, and re-styled it to just text links, no images, on one line (for minimal impact)
+- Fixed the broken top nav of the users pages
+
+V1.3
+- Added ability to check all Private Messages
+
+V1.22
+- Adjusted secondary nav to not COMPLETELY break member profile pages
+    - Current relevant bug: users with > 1 page of visitor messages will have a broken secondary nav
+- Changed the coloring of the main nav to match the blue and white theme of the site
+
+V1.21
+- Added secondary nav to fixed top nav
+- Made main nav left-align when window below 1111px (intercepts w/ search)
+- Removed superfluous "login" section
+
+V1.2
+- Fixed padding issue with footer, which was causing horizontal scroll
+
+V1.11
+- Restricted use to the forum section of the site
+
+V1.1
+- Sets site width to 100%, enabling a "Full Screen" effect
+- Fixed position navigation
