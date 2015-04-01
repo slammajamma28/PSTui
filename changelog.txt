@@ -1,5 +1,8 @@
 ~~CHANGELOG~~
 
+V1.45
+- April Fools!
+
 V1.44
 - New feature: Character count for both quick reply and regular posts
 
