@@ -129,10 +129,27 @@ $(document).ready(function(){
         "Battleship was a really underrated game.",
         "Magus for GOTY 2014!",
         "Back to the OT, did you guys see Noid's cool suit? I want one!",
-        "My ankles smell like almonds..."
+        "My ankles smell like almonds...",
+        "I really love Noid's cologne...",
+        "Noid's got such a sweet aura, dude.",
+        "Red is my favorite color",
+        "My favorite color is chartreuse",
+        "Pickle is my favorite color",
+        "It rubs the lotion on it's skin, or else it gets the hose again.",
+        "I'm the dude, man.",
+        "That Noid dude abides.",
+        "Oh, and this one time, at band camp...",
+        "I had no idea you could milk a cat.",
+        "I'm in a glass case of emotion!",
+        "I'm kinda psychic. I have a fifth sense.",
+        "It's like I have ESPN or something. My breasts can always tell when it's gonna rain.",
+        "Aaaaarrrrrgggghhhh - Kelly Clarkson!",
+        "I like to make sexy time!",
+        "I'm glad Noid's single, because I'm gonna climb that like a tree.",
+        "The Price is WRONG, bitch!"
     ];
     $('div[id^=post_message]').each(function(){
-        $(this).prepend("<span style='color: red;'>"+ noidArray[random = Math.ceil(Math.random() * 15)-1] +"</span><br/><br/>");
+        $(this).prepend("<span style='color: red;'>"+ noidArray[random = Math.ceil(Math.random() * 32)-1] +"</span><br/><br/>");
         console.log(random = Math.ceil(Math.random() * 5)-1);
     });
 
