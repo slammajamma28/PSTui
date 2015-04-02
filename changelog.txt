@@ -1,5 +1,8 @@
 ~~CHANGELOG~~
 
+V1.46
+- No more April Fools!
+
 V1.45
 - April Fools!
 

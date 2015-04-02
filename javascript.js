@@ -99,7 +99,7 @@ $(document).ready(function(){
     * */
 
     // Upside-down avatars
-    $('img[src*="avatar"]').css("transform", "rotate(180deg)");
+    /*$('img[src*="avatar"]').css("transform", "rotate(180deg)");*/
 
     // tuffmuff raindbow
     $("a.bigusername span:contains('tuffmuff')").html("" +
@@ -114,7 +114,7 @@ $(document).ready(function(){
     "");
 
     // Tell everyone how cool i am
-    var noidArray = [
+    /*var noidArray = [
         "Noid rocks!",
         "I can't help but swoon over that Noid guy!",
         "Man, have you SEEN Noid's SIX PACK!?",
@@ -151,7 +151,7 @@ $(document).ready(function(){
     $('div[id^=post_message]').each(function(){
         $(this).prepend("<span style='color: red;'>"+ noidArray[random = Math.ceil(Math.random() * 32)-1] +"</span><br/><br/>");
         console.log(random = Math.ceil(Math.random() * 5)-1);
-    });
+    });*/
 
 
 });
