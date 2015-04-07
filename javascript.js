@@ -113,6 +113,8 @@ $(document).ready(function(){
     "<span style='color:#6f0a82'>f</span>" +
     "");
 
+    $("img[src^='http://www.playstationtrophies.org/forum/images/Main/buttons/edit.gif']").attr("src","http://i.imgur.com/FYxWyVz.png");
+
     // Tell everyone how cool i am
     /*var noidArray = [
         "Noid rocks!",
