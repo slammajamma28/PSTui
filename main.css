@@ -29,6 +29,13 @@ body{ background: black; overflow-x: hidden; overflow-y: scroll; }
 @media (max-width: 1111px){ #menu{ text-align: left !important; } }
 
 
+/* Signatures 640px wide */
+.alt1 div:nth-child(4){ width: 772px; margin: 10px auto 0 auto; border-top: 1px solid #707070; }
+
+
 /* New Features */
+/*
 #live_modal{ display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.5); cursor: pointer; z-index: 9999999999999; }
 #live_modal img{ display: block; position: relative; max-height: 90%; max-width: 90%; margin: 5% auto; }
+*/
+

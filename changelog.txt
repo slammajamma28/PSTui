@@ -1,5 +1,8 @@
 ~~CHANGELOG~~
 
+V1.48
+- Signature styling adjustments, and logging for oversized (too tall) signatures
+
 V1.46
 - No more April Fools!
 

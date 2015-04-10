@@ -91,6 +91,23 @@ $(document).ready(function(){
         });
     }
 
+    // Signatures
+    $(".alt1 div:nth-child(4)").each(function(){
+        // Remove Lines
+        var text = $(this).html();
+        $(this).html(text.replace("__________________", ""));
+
+        var staff = false;
+        if($('.alt2:contains("Welcome, Noid")').length > 0){
+            staff = true;
+        }
+        if(staff){
+            // Log Signature Heights (with names)
+            if($(this).height() > 300){ console.log("!!!ALERT!!!"); }
+            console.log($(this).closest("table[id^=post]").find("a.bigusername").text() + ": " + $(this).height());
+        }
+    });
+
 
 
 
