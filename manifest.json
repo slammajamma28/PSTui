@@ -3,7 +3,11 @@
 
     "name": "PSTui",
     "description": "This extension serves to alter the experience on playstationtrophies.org.",
+<<<<<<< HEAD
     "version": "1.482",
+=======
+    "version": "1.47",
+>>>>>>> 257a072ae9f2d6c1a27382df88a8f036e83ce62d
 
     "browser_action": {
       "default_icon": "icon.png"
