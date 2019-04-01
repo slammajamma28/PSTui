@@ -53,3 +53,38 @@ div[id^=post] .alt1 div:nth-child(4){ width: 772px; margin: 10px auto 0 auto; bo
 .xba #menu a:hover{ background: #0f960d !important; }
 .xba .menLink{ background: #0F7D0D !important; }
 .xba #gc{ top: 70%; }
+
+/* April Fools! */
+.pst #head_main{
+  background-image: url('https://i.imgur.com/XVBgum9.png') !important;
+  background-color: #fa70ff;
+  background-size: 185px;
+}
+.pst{}
+.pst #menu {  background: #fa70ff !important; }
+.pst #menu a:hover{ background: #ff1cf0 !important; }
+.pst .menLink{  background: #fa70ff !important; }
+.thead{ background: #ff1cf0 !important; }
+body{ background: #fa70ff !important; }
+#footer{ border-top: 40px #fa70ff solid !important; background: #351858 !important; }
+.alt1{ background: #ffd8f9 !important; }
+.alt2{ background: #ffb4ef !important; }
+.tfoot{ background: #ffb4ef !important; }
+.page{ background: #fff2fe !important; }
+.tcat{ background: #351858 !important; }
+.tborder{ background: #fa70ff !important; }
+img[alt*='Avatar']{
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  border: 10px solid white;
+}
+.vbmenu_control{
+  background: #351858 !important;
+}
+
+/* XBA Styles */
+.xba{}
+.xba #menu { background: #fa70ff !important; }
+.xba #menu a:hover{ background: #0052b7 !important; }
+.xba .menLink{ background: #ff1cf0 !important; }

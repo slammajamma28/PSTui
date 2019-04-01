@@ -161,12 +161,40 @@ $(document).ready(function(){
     "");
 
     // Red edit button
-    $("img[src^='http://www.playstationtrophies.org/forum/images/Main/buttons/edit.gif']").attr("src","http://i.imgur.com/FYxWyVz.png");
-    $("img[src^='http://www.xboxachievements.org/forum/images/Main/buttons/edit.gif']").attr("src","http://i.imgur.com/FYxWyVz.png");
+    $("img[src^='http://www.playstationtrophies.org/forum/images/Main/buttons/edit.gif']").attr("src","https://i.imgur.com/FYxWyVz.png");
+    $("img[src^='http://www.xboxachievements.org/forum/images/Main/buttons/edit.gif']").attr("src","https://i.imgur.com/FYxWyVz.png");
 
     // Tell everyone how cool i am
-    /*var noidArray = [
-        "Noid rocks!",
+    var noidArray = [
+        "I'm a Winter Mess-Up.",
+        "An outhouse?",
+        "You know, there's messy, and then there's just plain rude.",
+        "Can't hear you, I'm asleep.",
+        "I ate too much pie.",
+        "Hey! I could clear the sky in ten seconds flat!",
+        "SURPRISE!",
+        "All the ponies in this town are CRAZY!",
+        "Whee! Let's go!",
+        "Oh, Rarity, your beautiful tail!",
+        "♫ The darkness and the shadows, they would always make me frooooown... ♫",
+        "AAAAH! Bats! Bats on my face! HEEEELP!!",
+        "...and then I said, \"Oatmeal? Are you CRAZ\"—oh.",
+        "Don't you use your fancy mathematics to muddy the issue!",
+        "Can bees squawk? I don't think so!",
+        "Pinkie Pie, you are so random!",
+        "I think I hear my laundry calling.",
+        "Okay. Imagine me with a nice long Fu Manchu-type beard. Or maybe a goatee...",
+        "Not everypony can be as brave as me.",
+        "Beware! Beware, you pony folk! Those leaves of blue are not a joke!",
+        "Oh, pony feathers!",
+        "Pfe pfuh pfuh pfeak puh-pluh-pli-plus!",
+        "Now I've gotta go find a trombone!",
+        "YOU TOUCH IT, YOU BUY IT! We take cash or credit.",
+        "Ultra Pony Roller Derby! Go!",
+        "So... no fudge?",
+        "Oh, horse apples!",
+        "Somepony needs to put this thing out of its misery."
+        /*"Noid rocks!",
         "I can't help but swoon over that Noid guy!",
         "Man, have you SEEN Noid's SIX PACK!?",
         "Noid really melts my butter!",
@@ -178,7 +206,7 @@ $(document).ready(function(){
         "Release the Kraken!",
         "She sells sea shells by the sea shore.",
         "Battleship was a really underrated game.",
-        "Magus for GOTY 2014!",
+        "Magus for GOTY 2019!",
         "Back to the OT, did you guys see Noid's cool suit? I want one!",
         "My ankles smell like almonds...",
         "I really love Noid's cologne...",
@@ -197,27 +225,27 @@ $(document).ready(function(){
         "Aaaaarrrrrgggghhhh - Kelly Clarkson!",
         "I like to make sexy time!",
         "I'm glad Noid's single, because I'm gonna climb that like a tree.",
-        "The Price is WRONG, bitch!"
+        "The Price is WRONG, bitch!"*/
     ];
     $('div[id^=post_message]').each(function(){
-        $(this).prepend("<span style='color: red;'>"+ noidArray[random = Math.ceil(Math.random() * 32)-1] +"</span><br/><br/>");
-        console.log(random = Math.ceil(Math.random() * 5)-1);
-    });*/
+        $(this).prepend("<span style='color: #351858;'>"+ noidArray[random = Math.ceil(Math.random() * 28)-1] +"</span><br/><br/>");
+        // console.log(random = Math.ceil(Math.random() * 5)-1);
+    });
 
     // Friendship is magic
-    /*var images = [
-        "http://i.imgur.com/2bHHDUf.png",
-        "http://i.imgur.com/djUdeNl.png",
-        "http://i.imgur.com/oICdNCT.png",
-        "http://i.imgur.com/8CrDYAH.png",
-        "http://i.imgur.com/1TfCsnU.png",
-        "http://i.imgur.com/7O6dTTJ.png"
+    var images = [
+        "https://i.imgur.com/2bHHDUf.png",
+        "https://i.imgur.com/djUdeNl.png",
+        "https://i.imgur.com/oICdNCT.png",
+        "https://i.imgur.com/8CrDYAH.png",
+        "https://i.imgur.com/1TfCsnU.png",
+        "https://i.imgur.com/7O6dTTJ.png"
     ];
     $("img[alt*='Avatar']").each(function(){
         var num = (Math.floor(Math.random() * 6) + 1)-1;
         //console.log(num);
         $(this).attr("src", images[num]);
-    });*/
+    });
 
 
 });

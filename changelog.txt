@@ -1,5 +1,8 @@
 ~~CHANGELOG~~
 
+V1.601
+- April Fools! :D
+
 V1.521
 - Updated Twitch banner to 100% width
 
