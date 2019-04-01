@@ -1,5 +1,16 @@
 ~~CHANGELOG~~
 
+V1.521
+- Updated Twitch banner to 100% width
+
+V1.51~2
+- Added, and then removed (commented out) April Fool's code
+- Made all avatars into My Little Pony avatars
+
+V1.5
+- Added support for Xboxachievements.org
+- Removed some buggy features
+
 V1.48
 - Signature styling adjustments, and logging for oversized (too tall) signatures
 

@@ -1,10 +1,8 @@
 body{ background: black; overflow-x: hidden; overflow-y: scroll; }
 #nb, #head_main, #cont, .page{ width: 100% !important; }
 #head_main{ height: 150px !important; background-position: 50% 40px !important; }
-#menu { z-index: 999999 !important; position: fixed !important; top: 0 !important; text-align: center !important; height: 40px !important; background: #01469D !important; min-width: 994px !important; }
+#menu { z-index: 999999 !important; position: fixed !important; top: 0 !important; text-align: center !important; height: 40px !important; min-width: 994px !important; }
 #menu a{ color: white !important; }
-#menu a:hover{ background: #0052b7 !important; }
-.menLink{ background: #01469D !important; }
 .menLink font{ color: white !important; }
 #search{ position: absolute !important; top: 7px !important; z-index: 999999 !important; }
 #footer{ padding: 2% 5% !important; width: 90% !important; }
@@ -29,13 +27,29 @@ body{ background: black; overflow-x: hidden; overflow-y: scroll; }
 @media (max-width: 1111px){ #menu{ text-align: left !important; } }
 
 
-/* Signatures 640px wide */
-.alt1 div:nth-child(4){ width: 772px; margin: 10px auto 0 auto; border-top: 1px solid #707070; }
+/* Signatures width */
+div[id^=post] .alt1 div:nth-child(4){ width: 772px; margin: 10px auto 0 auto; border-top: 1px solid #707070; }
 
 
 /* New Features */
-/*
-#live_modal{ display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.5); cursor: pointer; z-index: 9999999999999; }
-#live_modal img{ display: block; position: relative; max-height: 90%; max-width: 90%; margin: 5% auto; }
-*/
+/*#live_modal{ display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.5); cursor: pointer; z-index: 9999999999999; }*/
+/*#live_modal img{ display: block; position: relative; max-height: 90%; max-width: 90%; margin: 5% auto; }*/
 
+/* Default Styles */
+#menu {  background: #000 !important; }
+#menu a:hover{ background: #222 !important; }
+.menLink{  background: #000 !important; }
+#twWidget{ width: 100%; }
+
+/* PST Styles */
+.pst{}
+.pst #menu {  background: #01469D !important; }
+.pst #menu a:hover{ background: #0052b7 !important; }
+.pst .menLink{  background: #01469D !important; }
+
+/* XBA Styles */
+.xba{}
+.xba #menu { background: #0F7D0D !important; }
+.xba #menu a:hover{ background: #0f960d !important; }
+.xba .menLink{ background: #0F7D0D !important; }
+.xba #gc{ top: 70%; }

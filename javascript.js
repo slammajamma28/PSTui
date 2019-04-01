@@ -1,6 +1,15 @@
 $(document).ready(function(){
 
     /*
+    *   XBA
+    */
+    if(window.location.href.indexOf("playstationtrophies") > -1) {
+        $("body").addClass("pst");
+    } else {
+        $("body").addClass("xba");
+    }
+
+    /*
      *  ELEMENT PLACEMENT
      */
 
@@ -50,7 +59,7 @@ $(document).ready(function(){
 
     // POST IMAGES OPEN IN MODAL
     // Add modal container
-    $("body").append("<div id='live_modal'></div>");
+    /*$("body").append("<div id='live_modal'></div>");
 
     // Click Actions
     var movement = false;
@@ -75,10 +84,10 @@ $(document).ready(function(){
                 movement = false;
             }, 500)
         }
-    });
+    });*/
 
     // Post Character Count
-    if($("#vB_Editor_001_textarea").length){
+    /*if($("#vB_Editor_001_textarea").length){
         $("#vB_Editor_001_textarea").parent().parent().after("<p id='charCount'>Character Count: <span>" + $("#vB_Editor_001_textarea").val().length + "</span></p>");
         $("#vB_Editor_001_textarea").keyup(function(){
             $("#charCount span").text($(this).val().length);
@@ -89,10 +98,31 @@ $(document).ready(function(){
         $("#vB_Editor_QR_textarea").keyup(function(){
             $("#charCount span").text($(this).val().length);
         });
+    }*/
+
+    // Post Character Count
+    var characterCounter = function(txt, char) {
+        return (txt.match(new RegExp(char, "g")) || []).length;
+    };
+    var vbEditorTextLength = function(txt) {
+        return txt.length + characterCounter(txt, "\n");
+    };
+    if($("#vB_Editor_001_textarea").length){
+        $("#vB_Editor_001_textarea").parent().parent().after("<p id='charCount'>Character Count: <span>" + vbEditorTextLength($("#vB_Editor_001_textarea").val()) + "</span></p>");
+        $("#vB_Editor_001_textarea").keyup(function(){
+            $("#charCount span").text(vbEditorTextLength($(this).val()));
+        });
     }
+    /*if($("#vB_Editor_QR_textarea").length){
+        $("#vB_Editor_QR_textarea").after("<p id='charCount'>Character Count: <span>0</span></p>");
+        $("#vB_Editor_QR_textarea").keyup(function(){
+            console.log("here");
+            $("#charCount span").text(vbEditorTextLength($(this).val().length));
+        });
+    }*/
 
     // Signatures
-    $(".alt1 div:nth-child(4)").each(function(){
+    $("div[id^=post] .alt1 div:nth-child(4):contains('__________________')").each(function(){
         // Remove Lines
         var text = $(this).html();
         $(this).html(text.replace("__________________", ""));
@@ -118,7 +148,7 @@ $(document).ready(function(){
     // Upside-down avatars
     /*$('img[src*="avatar"]').css("transform", "rotate(180deg)");*/
 
-    // tuffmuff raindbow
+    // tuffmuff rainbow
     $("a.bigusername span:contains('tuffmuff')").html("" +
     "<span style='color:#f13c9d'>t</span>" +
     "<span style='color:#f80b25'>u</span>" +
@@ -130,7 +160,9 @@ $(document).ready(function(){
     "<span style='color:#6f0a82'>f</span>" +
     "");
 
+    // Red edit button
     $("img[src^='http://www.playstationtrophies.org/forum/images/Main/buttons/edit.gif']").attr("src","http://i.imgur.com/FYxWyVz.png");
+    $("img[src^='http://www.xboxachievements.org/forum/images/Main/buttons/edit.gif']").attr("src","http://i.imgur.com/FYxWyVz.png");
 
     // Tell everyone how cool i am
     /*var noidArray = [
@@ -170,6 +202,21 @@ $(document).ready(function(){
     $('div[id^=post_message]').each(function(){
         $(this).prepend("<span style='color: red;'>"+ noidArray[random = Math.ceil(Math.random() * 32)-1] +"</span><br/><br/>");
         console.log(random = Math.ceil(Math.random() * 5)-1);
+    });*/
+
+    // Friendship is magic
+    /*var images = [
+        "http://i.imgur.com/2bHHDUf.png",
+        "http://i.imgur.com/djUdeNl.png",
+        "http://i.imgur.com/oICdNCT.png",
+        "http://i.imgur.com/8CrDYAH.png",
+        "http://i.imgur.com/1TfCsnU.png",
+        "http://i.imgur.com/7O6dTTJ.png"
+    ];
+    $("img[alt*='Avatar']").each(function(){
+        var num = (Math.floor(Math.random() * 6) + 1)-1;
+        //console.log(num);
+        $(this).attr("src", images[num]);
     });*/
 
 
