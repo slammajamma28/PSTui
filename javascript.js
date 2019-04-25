@@ -17,9 +17,11 @@ $(document).ready(function(){
     $("#search").appendTo("#menu");
 
     // Remove "Welcome" from Login section
-    oldhtml = $('#login').html();
+    oldhtml = $("#login").html();
     var newhtml = oldhtml.replace("Welcome", "");
-    $('#login').html(newhtml);
+    $("#login").html(newhtml);
+
+
 
     // Fixing User pages top nav by hiding the extras
     $(".vbmenu_control").each(function(index) {
@@ -128,7 +130,7 @@ $(document).ready(function(){
         $(this).html(text.replace("__________________", ""));
 
         var staff = false;
-        if($('.alt2:contains("Welcome, Noid")').length > 0){
+        if($('.alt2:contains("Welcome, Slamma")').length > 0){
             staff = true;
         }
         if(staff){
@@ -142,7 +144,7 @@ $(document).ready(function(){
 
 
     /*
-    * Fun shit for no good reason
+    * Fun stuff for no good reason
     * */
 
     // Upside-down avatars
@@ -226,7 +228,7 @@ $(document).ready(function(){
         "Aaaaarrrrrgggghhhh - Kelly Clarkson!",
         "I like to make sexy time!",
         "I'm glad Noid's single, because I'm gonna climb that like a tree.",
-        "The Price is WRONG, bitch!"*/
+        "The Price is WRONG, bitch!"
     ];
     $('div[id^=post_message]').each(function(){
         $(this).prepend("<span style='color: #351858;'>"+ noidArray[random = Math.ceil(Math.random() * 28)-1] +"</span><br/><br/>");
