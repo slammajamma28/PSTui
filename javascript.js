@@ -164,6 +164,7 @@ $(document).ready(function(){
     $("img[src^='http://www.playstationtrophies.org/forum/images/Main/buttons/edit.gif']").attr("src","https://i.imgur.com/FYxWyVz.png");
     $("img[src^='http://www.xboxachievements.org/forum/images/Main/buttons/edit.gif']").attr("src","https://i.imgur.com/FYxWyVz.png");
 
+/* Code for MLP April Fools 2019
     // Tell everyone how cool i am
     var noidArray = [
         "I'm a Winter Mess-Up.",
@@ -245,7 +246,7 @@ $(document).ready(function(){
         var num = (Math.floor(Math.random() * 6) + 1)-1;
         //console.log(num);
         $(this).attr("src", images[num]);
-    });
+    });  END APRIL FOOLS 2019 */
 
 
 });

@@ -54,12 +54,12 @@ div[id^=post] .alt1 div:nth-child(4){ width: 772px; margin: 10px auto 0 auto; bo
 .xba .menLink{ background: #0F7D0D !important; }
 .xba #gc{ top: 70%; }
 
-/* April Fools! */
+/* April Fools 2019
 .pst #head_main{
   background-image: url('https://i.imgur.com/XVBgum9.png') !important;
   background-color: #fa70ff;
   background-size: 185px;
-}
+
 .pst{}
 .pst #menu {  background: #fa70ff !important; }
 .pst #menu a:hover{ background: #ff1cf0 !important; }
@@ -83,8 +83,8 @@ img[alt*='Avatar']{
   background: #351858 !important;
 }
 
-/* XBA Styles */
+// XBA Styles
 .xba{}
 .xba #menu { background: #fa70ff !important; }
 .xba #menu a:hover{ background: #0052b7 !important; }
-.xba .menLink{ background: #ff1cf0 !important; }
+.xba .menLink{ background: #ff1cf0 !important; }}  END APRIL FOOLS 2019 */
