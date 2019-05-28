@@ -26,14 +26,25 @@ body{ background: black; overflow-x: hidden; overflow-y: scroll; }
 
 @media (max-width: 1111px){ #menu{ text-align: left !important; } }
 
-
 /* Signatures width */
 div[id^=post] .alt1 div:nth-child(4){ width: 772px; margin: 10px auto 0 auto; border-top: 1px solid #707070; }
-
 
 /* New Features */
 /*#live_modal{ display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.5); cursor: pointer; z-index: 9999999999999; }*/
 /*#live_modal img{ display: block; position: relative; max-height: 90%; max-width: 90%; margin: 5% auto; }*/
+
+/* Blinking Stuff*/
+@keyframes pulse {
+    50% { border-color: red; }
+
+}
+.lookatthis {
+    display: block;
+    text-align: center;
+    font-size: 14px;
+    border: 2px solid;
+    animation: pulse .5s step-end infinite alternate;
+}
 
 /* Default Styles */
 #menu {  background: #000 !important; }
@@ -59,7 +70,7 @@ div[id^=post] .alt1 div:nth-child(4){ width: 772px; margin: 10px auto 0 auto; bo
   background-image: url('https://i.imgur.com/XVBgum9.png') !important;
   background-color: #fa70ff;
   background-size: 185px;
-
+}
 .pst{}
 .pst #menu {  background: #fa70ff !important; }
 .pst #menu a:hover{ background: #ff1cf0 !important; }
@@ -87,4 +98,4 @@ img[alt*='Avatar']{
 .xba{}
 .xba #menu { background: #fa70ff !important; }
 .xba #menu a:hover{ background: #0052b7 !important; }
-.xba .menLink{ background: #ff1cf0 !important; }}  END APRIL FOOLS 2019 */
+.xba .menLink{ background: #ff1cf0 !important; }  END APRIL FOOLS 2019 */

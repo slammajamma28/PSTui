@@ -1,10 +1,13 @@
 *{ font-family: arial, sans-serif; }
 body{ width: 300px; }
 
-input{ width: 100%; margin: 10px 0; }
-label{ font-weight: bold; }
-
 #logo{ display: block; margin: 0 auto; }
 .divider{ height: 1px; width: 100%; background: black; margin: 20px 0; }
 
+input#selfColor{ width: 30%; margin: 10px 10px; }
+input#pstName{ width: 50%; margin: 10px 10px; }
+label{ font-weight: bold; }
+
 #status{ display: none; }
+
+#currentColor{ color: #000000; }

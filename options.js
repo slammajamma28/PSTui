@@ -1,35 +1,28 @@
-$(document).ready(function(){
+function saveOptions(e) {
+    localStorage.setItem("pstName", document.querySelector("#userName").value);
+    localStorage.setItem("selfColor", document.querySelector("#colorChoice").value);
+//    browser.storage.local.set({
+//        pstName: document.querySelector("#userName").value,
+//        selfColor: document.querySelector("#colorChoice").value
+//    });
+    e.preventDefault();
+}
 
-    // Variables for submission
-    var pageWidth = "";
+function updateUI(res) {
+    document.querySelector("#userName").value = res.pstName || "";
+    document.querySelector("#colorChoice").value = res.selfColor || "";
+}
 
-    // Page Width Slider
-    $("#content_width").on("input", function(){
-        $("#content_width_number").val($(this).val());
-        pageWidth = $("#content_width_number").val();
-    });
+function onError(e) {
+    console.error(e);
+}
 
-    // Submit
-    $("#submit_form").click(function(e){
-        e.preventDefault();
+function restoreOptions() {
+//    var gettingItem = browser.storage.local.get();
+//    gettingItem.then(updateUI, onError);
+    document.querySelector("#userName").value = localStorage.getItem("pstName") || "";
+    document.querySelector("#colorChoice").value = localStorage.getItem("selfColor") || "";
+}
 
-        // Errors
-        if(pageWidth == ""){
-            $("#status").text("Please Enter a Page Width Above").fadeIn(200);
-            setTimeout(function() {
-                $("#status").fadeOut(200);
-            }, 1500);
-        } else {
-            chrome.storage.sync.set({
-                storedPageWidth: pageWidth
-            }, function() {
-                $("#status").text("Saved: " + pageWidth).fadeIn(200);
-                setTimeout(function() {
-                    $("#status").fadeOut(200);
-                }, 1500);
-            });
-        }
-
-    });
-
-});
+document.addEventListener('DOMContentLoaded', restoreOptions);
+document.querySelector("#submit_form").addEventListener("submit", saveOptions);

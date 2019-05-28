@@ -4,12 +4,12 @@
    },
    "content_scripts": [ {
       "css": [ "main.css" ],
-      "js": [ "jquery-2.1.3.min.js", "javascript.js", "options.js" ],
+      "js": [ "jquery-3.4.1.js", "javascript.js" ],
       "matches": [ "https://www.playstationtrophies.org/forum/*", "https://www.xboxachievements.com/forum/*" ]
    } ],
    "description": "This extension serves to alter the experience on playstationtrophies.org, forked from Chrome version.",
    "manifest_version": 2,
    "name": "PSTui",
    "permissions": [ "tabs", "activeTab", "storage" ],
-   "version": "1.601"
+   "version": "1.7"
 }
