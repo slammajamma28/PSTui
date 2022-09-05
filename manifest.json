@@ -3,13 +3,12 @@
       "default_icon": "icon.png"
    },
    "content_scripts": [ {
-      "css": [ "main.css" ],
-      "js": [ "jquery-3.4.1.js", "javascript.js" ],
-      "matches": [ "https://www.playstationtrophies.org/forum/*", "https://www.xboxachievements.com/forum/*" ]
+      "js": [ "jquery-3.6.1.js", "javascript.js" ],
+      "matches": [ "https://www.playstationtrophies.org/admtools/*", "https://www.playstationtrophies.org/forum/admin/*"]
    } ],
    "description": "This extension serves to alter the experience on playstationtrophies.org, forked from Chrome version.",
    "manifest_version": 2,
    "name": "PSTui",
    "permissions": [ "tabs", "activeTab", "storage" ],
-   "version": "1.7"
+   "version": "2.0"
 }
