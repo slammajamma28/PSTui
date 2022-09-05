@@ -1,4 +1,8 @@
 ~~CHANGELOG~~
+V2.0
+- Updated to jQuery 3.6.1
+- Commented out all previous functionality since it has been rendered mostly useless since the upgrade 2 years ago
+- Added a few admin-level UI tweaks so I don't have to scroll/click so much when adding forums
 
 V1.7
 - Updated to jQuery 3.4.1
