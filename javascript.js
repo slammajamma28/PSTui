@@ -8,6 +8,8 @@ $(document).ready(function(){
         var edit_form = $("#game_edit .section:eq(0)");
         var submit_changes = $(".col-md-8 section:eq(5)");
         submit_changes.appendTo(edit_form);
+
+        // Can I enable the enter button to save changes?
     }
     // Make tweaks to forum creation page
     if (currentPath.includes("forum/admin")){
@@ -32,12 +34,15 @@ $(document).ready(function(){
             // Collapse Parent Forum options menu
             $("#form_new_forum_parent_id .ipsFieldRow_content .ipsSelectTree .ipsSelectTree_nodes .ipsScrollbar ul li .ipsSelectTree_itemOpen").removeClass("ipsSelectTree_itemOpen")
             $("#form_new_forum_parent_id .ipsFieldRow_content .ipsSelectTree .ipsSelectTree_nodes .ipsScrollbar ul li div[data-role]").css({"style":"display: none"}).css({"display": "none"})
+
+            // Fix positioning of menu because it gets cut off at the bottom and I can't scroll down 
         }
         if (currentPath.includes("do=permissions")) {
             // Hide table, I don't wanna change any permissions
             $("table.ipsTable").css({"display": "none"})
+
+            // Space the permissions button so I can click straight through without needing to move the mouse...
         }
     }
         
-        $("table.ipsTable")
 });
