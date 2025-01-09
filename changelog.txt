@@ -1,4 +1,12 @@
 ~~CHANGELOG~~
+V2.4
+- Move REPORTS section above GAMES - Can't see reports section on smaller monitor
+- Implement auto-fill functionality for polls since Lightning Autofill went freemium
+
+V2.3
+- Additional admin-level tweaks
+- Not sure what happened to 2.1 or 2.2
+
 V2.0
 - Updated to jQuery 3.6.1
 - Commented out all previous functionality since it has been rendered mostly useless since the upgrade 2 years ago
