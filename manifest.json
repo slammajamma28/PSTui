@@ -8,6 +8,7 @@
       }
    },
    "content_scripts": [ {
+      "css": [ "main.css" ],
       "js": [ "jquery-3.6.1.js", "javascript.js" ],
       "matches": [ "https://www.playstationtrophies.org/admtools/*", "https://www.playstationtrophies.org/forum/admin/*", "https://www.playstationtrophies.org/forum/forum/*"]
    } ],
