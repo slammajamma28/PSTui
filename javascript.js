@@ -82,27 +82,12 @@ $(document).ready(function(){
         var pollType = ''
         var q1Type = ''
         var contentType = ''
-        // Add embedded styles for the buttons
-        var styles = `
-            <style>
-                #platinumPollsButton, #hundredPercentPollsButton {
-                    position: fixed;
-                    left: 2%;
-                    top: 45%;
-                    transform: translateY(-50%);
-                    z-index: 10000;
-                }
-                #hundredPercentPollsButton {
-                    top: 55%;
-                }
-            </style>
-        `;
-        $('head').append(styles);
 
         // Add a button to the page to fill in all the values.
         var platinumButton = $('<button/>', {
             text: 'Platinum Polls',
             id: 'platinumPollsButton',
+            class: 'ipsButton',
             click: function () { 
                 pollType = 'Platinum'
                 q1Type = 'Platinum'
@@ -116,6 +101,7 @@ $(document).ready(function(){
         var hundredPercentButton = $('<button/>', {
             text: '100% Polls',
             id: 'hundredPercentPollsButton',
+            class: 'ipsButton',
             click: function () { 
                 pollType = '100%'
                 q1Type = 'Trophy'
@@ -124,6 +110,17 @@ $(document).ready(function(){
             }
         });
         hundredPercentButton.appendTo('body');
+
+        // // Add a button to the page to test the test() function
+        // var testButton = $('<button/>', {
+        //     text: 'Test',
+        //     id: 'testButton',
+        //     class: 'ipsButton',
+        //     click: function () { 
+        //         test()
+        //     }
+        // });
+        // testButton.appendTo('body');
 
         function createPolls(pollType, q1Type, contentType){
             // Click Pin
@@ -147,15 +144,34 @@ $(document).ready(function(){
             // Question 1 title
             $("input[name='topic_poll[questions][1][title]']").val("Rate the " + q1Type + " Difficulty")
 
-            // Click Add Choice x10
-            // $("a[data-action='addChoice']").trigger("click")
-            // $("a[data-action='addChoice']").click()
-            // $("a[data-action='addChoice']").click()
-            // $("a[data-action='addChoice']").click()
-            // $("a[data-action='addChoice']").click()
-            // $("a[data-action='addChoice']").click()
-            // $("a[data-action='addChoice']").click()
-            // $("a[data-action='addChoice']").click()
+            // Add Question 2
+            $("section[data-role='pollContainer']").append('<div class="ipsAreaBackground_light ipsBox ipsBox_transparent" data-role="question" data-questionid="2" animating="false"><div class="ipsAreaBackground ipsPad"><input type="text" data-role="questionTitle" name="topic_poll[questions][2][title]" placeholder="Question title" class="ipsField_fullWidth" value=""></div><div><ul class="ipsDataList cPollChoices" data-role="choices"><li class="ipsDataItem ipsResponsive_hidePhone"><p class="ipsDataItem_generic ipsDataItem_size1">&nbsp;</p><p class="ipsDataItem_main"><strong>Choices</strong></p><p class="ipsDataItem_generic ipsDataItem_size1">&nbsp;</p></li><li class="ipsDataItem" data-choiceid="1"><div class="ipsDataItem_generic ipsDataItem_size1 cPollChoiceNumber ipsType_right ipsType_normal"><strong data-role="choiceNumber">1</strong></div><div class="ipsDataItem_main"><input type="text" name="topic_poll[questions][2][answers][1][value]" value="" class="ipsField_fullWidth"></div><div class="ipsDataItem_generic ipsDataItem_size1"><a href="#" data-action="removeChoice" class="ipsButton ipsButton_verySmall ipsButton_link ipsButton_link--negative ipsButton_narrow"><i class="fa fa-times"></i></a></div></li><li class="ipsDataItem" data-choiceid="2"><div class="ipsDataItem_generic ipsDataItem_size1 cPollChoiceNumber ipsType_right ipsType_normal"><strong data-role="choiceNumber">2</strong></div><div class="ipsDataItem_main"><input type="text" name="topic_poll[questions][2][answers][2][value]" value="" class="ipsField_fullWidth"></div><div class="ipsDataItem_generic ipsDataItem_size1"><a href="#" data-action="removeChoice" class="ipsButton ipsButton_verySmall ipsButton_link ipsButton_link--negative ipsButton_narrow"><i class="fa fa-times"></i></a></div></li></ul><br><div class="ipsDataList"><p class="ipsDataItem_generic ipsDataItem_size1">&nbsp;</p><ul class="ipsDataItem_main ipsList_inline ipsPadding_right:half"><li class="ipsPos_right"><a href="#" data-action="removeQuestion" class="ipsButton ipsButton_verySmall ipsButton_link ipsButton_link--negative">Remove question</a></li><li><a href="#" data-action="addChoice" class="ipsButton ipsButton_verySmall ipsButton_link">Add Choice</a></li><li><span class="ipsCustomInput"><input type="checkbox" id="elPoll_topic_poll_2multi" name="topic_poll[questions][2][multichoice]"><span></span></span><label for="elPoll_topic_poll_2multi">Multiple choice question?</label></li></ul></div></div</div>')
+
+            // Make 10 options for Question 1
+            $("ul.cPollChoices:eq(0)").append('<li class="ipsDataItem" data-choiceid="3"><div class="ipsDataItem_generic ipsDataItem_size1 cPollChoiceNumber ipsType_right ipsType_normal"><strong data-role="choiceNumber">3</strong></div><div class="ipsDataItem_main"><input type="text" name="topic_poll[questions][1][answers][3][value]" value="" class="ipsField_fullWidth"></div><div class="ipsDataItem_generic ipsDataItem_size1"><a href="#" data-action="removeChoice" class="ipsButton ipsButton_verySmall ipsButton_link ipsButton_link--negative ipsButton_narrow ipsButton_disabled ipsFaded"><i class="fa fa-times"></i></a></div></li>' +
+                                        '<li class="ipsDataItem" data-choiceid="4"><div class="ipsDataItem_generic ipsDataItem_size1 cPollChoiceNumber ipsType_right ipsType_normal"><strong data-role="choiceNumber">4</strong></div><div class="ipsDataItem_main"><input type="text" name="topic_poll[questions][1][answers][4][value]" value="" class="ipsField_fullWidth"></div><div class="ipsDataItem_generic ipsDataItem_size1"><a href="#" data-action="removeChoice" class="ipsButton ipsButton_verySmall ipsButton_link ipsButton_link--negative ipsButton_narrow ipsButton_disabled ipsFaded"><i class="fa fa-times"></i></a></div></li>' +
+                                        '<li class="ipsDataItem" data-choiceid="5"><div class="ipsDataItem_generic ipsDataItem_size1 cPollChoiceNumber ipsType_right ipsType_normal"><strong data-role="choiceNumber">5</strong></div><div class="ipsDataItem_main"><input type="text" name="topic_poll[questions][1][answers][5][value]" value="" class="ipsField_fullWidth"></div><div class="ipsDataItem_generic ipsDataItem_size1"><a href="#" data-action="removeChoice" class="ipsButton ipsButton_verySmall ipsButton_link ipsButton_link--negative ipsButton_narrow ipsButton_disabled ipsFaded"><i class="fa fa-times"></i></a></div></li>' +
+                                        '<li class="ipsDataItem" data-choiceid="6"><div class="ipsDataItem_generic ipsDataItem_size1 cPollChoiceNumber ipsType_right ipsType_normal"><strong data-role="choiceNumber">6</strong></div><div class="ipsDataItem_main"><input type="text" name="topic_poll[questions][1][answers][6][value]" value="" class="ipsField_fullWidth"></div><div class="ipsDataItem_generic ipsDataItem_size1"><a href="#" data-action="removeChoice" class="ipsButton ipsButton_verySmall ipsButton_link ipsButton_link--negative ipsButton_narrow ipsButton_disabled ipsFaded"><i class="fa fa-times"></i></a></div></li>' +
+                                        '<li class="ipsDataItem" data-choiceid="7"><div class="ipsDataItem_generic ipsDataItem_size1 cPollChoiceNumber ipsType_right ipsType_normal"><strong data-role="choiceNumber">7</strong></div><div class="ipsDataItem_main"><input type="text" name="topic_poll[questions][1][answers][7][value]" value="" class="ipsField_fullWidth"></div><div class="ipsDataItem_generic ipsDataItem_size1"><a href="#" data-action="removeChoice" class="ipsButton ipsButton_verySmall ipsButton_link ipsButton_link--negative ipsButton_narrow ipsButton_disabled ipsFaded"><i class="fa fa-times"></i></a></div></li>' +
+                                        '<li class="ipsDataItem" data-choiceid="8"><div class="ipsDataItem_generic ipsDataItem_size1 cPollChoiceNumber ipsType_right ipsType_normal"><strong data-role="choiceNumber">8</strong></div><div class="ipsDataItem_main"><input type="text" name="topic_poll[questions][1][answers][8][value]" value="" class="ipsField_fullWidth"></div><div class="ipsDataItem_generic ipsDataItem_size1"><a href="#" data-action="removeChoice" class="ipsButton ipsButton_verySmall ipsButton_link ipsButton_link--negative ipsButton_narrow ipsButton_disabled ipsFaded"><i class="fa fa-times"></i></a></div></li>' +
+                                        '<li class="ipsDataItem" data-choiceid="9"><div class="ipsDataItem_generic ipsDataItem_size1 cPollChoiceNumber ipsType_right ipsType_normal"><strong data-role="choiceNumber">9</strong></div><div class="ipsDataItem_main"><input type="text" name="topic_poll[questions][1][answers][9][value]" value="" class="ipsField_fullWidth"></div><div class="ipsDataItem_generic ipsDataItem_size1"><a href="#" data-action="removeChoice" class="ipsButton ipsButton_verySmall ipsButton_link ipsButton_link--negative ipsButton_narrow ipsButton_disabled ipsFaded"><i class="fa fa-times"></i></a></div></li>' +
+                                        '<li class="ipsDataItem" data-choiceid="10"><div class="ipsDataItem_generic ipsDataItem_size1 cPollChoiceNumber ipsType_right ipsType_normal"><strong data-role="choiceNumber">10</strong></div><div class="ipsDataItem_main"><input type="text" name="topic_poll[questions][1][answers][10][value]" value="" class="ipsField_fullWidth"></div><div class="ipsDataItem_generic ipsDataItem_size1"><a href="#" data-action="removeChoice" class="ipsButton ipsButton_verySmall ipsButton_link ipsButton_link--negative ipsButton_narrow ipsButton_disabled ipsFaded"><i class="fa fa-times"></i></a></div></li>')
+
+            // Make 15 options for Question 2
+            $("ul.cPollChoices:eq(1)").append('<li class="ipsDataItem" data-choiceid="3"><div class="ipsDataItem_generic ipsDataItem_size1 cPollChoiceNumber ipsType_right ipsType_normal"><strong data-role="choiceNumber">3</strong></div><div class="ipsDataItem_main"><input type="text" name="topic_poll[questions][2][answers][3][value]" value="" class="ipsField_fullWidth"></div><div class="ipsDataItem_generic ipsDataItem_size1"><a href="#" data-action="removeChoice" class="ipsButton ipsButton_verySmall ipsButton_link ipsButton_link--negative ipsButton_narrow ipsButton_disabled ipsFaded"><i class="fa fa-times"></i></a></div></li>' +
+                                        '<li class="ipsDataItem" data-choiceid="4"><div class="ipsDataItem_generic ipsDataItem_size1 cPollChoiceNumber ipsType_right ipsType_normal"><strong data-role="choiceNumber">4</strong></div><div class="ipsDataItem_main"><input type="text" name="topic_poll[questions][2][answers][4][value]" value="" class="ipsField_fullWidth"></div><div class="ipsDataItem_generic ipsDataItem_size1"><a href="#" data-action="removeChoice" class="ipsButton ipsButton_verySmall ipsButton_link ipsButton_link--negative ipsButton_narrow ipsButton_disabled ipsFaded"><i class="fa fa-times"></i></a></div></li>' +
+                                        '<li class="ipsDataItem" data-choiceid="5"><div class="ipsDataItem_generic ipsDataItem_size1 cPollChoiceNumber ipsType_right ipsType_normal"><strong data-role="choiceNumber">5</strong></div><div class="ipsDataItem_main"><input type="text" name="topic_poll[questions][2][answers][5][value]" value="" class="ipsField_fullWidth"></div><div class="ipsDataItem_generic ipsDataItem_size1"><a href="#" data-action="removeChoice" class="ipsButton ipsButton_verySmall ipsButton_link ipsButton_link--negative ipsButton_narrow ipsButton_disabled ipsFaded"><i class="fa fa-times"></i></a></div></li>' +
+                                        '<li class="ipsDataItem" data-choiceid="6"><div class="ipsDataItem_generic ipsDataItem_size1 cPollChoiceNumber ipsType_right ipsType_normal"><strong data-role="choiceNumber">6</strong></div><div class="ipsDataItem_main"><input type="text" name="topic_poll[questions][2][answers][6][value]" value="" class="ipsField_fullWidth"></div><div class="ipsDataItem_generic ipsDataItem_size1"><a href="#" data-action="removeChoice" class="ipsButton ipsButton_verySmall ipsButton_link ipsButton_link--negative ipsButton_narrow ipsButton_disabled ipsFaded"><i class="fa fa-times"></i></a></div></li>' +
+                                        '<li class="ipsDataItem" data-choiceid="7"><div class="ipsDataItem_generic ipsDataItem_size1 cPollChoiceNumber ipsType_right ipsType_normal"><strong data-role="choiceNumber">7</strong></div><div class="ipsDataItem_main"><input type="text" name="topic_poll[questions][2][answers][7][value]" value="" class="ipsField_fullWidth"></div><div class="ipsDataItem_generic ipsDataItem_size1"><a href="#" data-action="removeChoice" class="ipsButton ipsButton_verySmall ipsButton_link ipsButton_link--negative ipsButton_narrow ipsButton_disabled ipsFaded"><i class="fa fa-times"></i></a></div></li>' +
+                                        '<li class="ipsDataItem" data-choiceid="8"><div class="ipsDataItem_generic ipsDataItem_size1 cPollChoiceNumber ipsType_right ipsType_normal"><strong data-role="choiceNumber">8</strong></div><div class="ipsDataItem_main"><input type="text" name="topic_poll[questions][2][answers][8][value]" value="" class="ipsField_fullWidth"></div><div class="ipsDataItem_generic ipsDataItem_size1"><a href="#" data-action="removeChoice" class="ipsButton ipsButton_verySmall ipsButton_link ipsButton_link--negative ipsButton_narrow ipsButton_disabled ipsFaded"><i class="fa fa-times"></i></a></div></li>' +
+                                        '<li class="ipsDataItem" data-choiceid="9"><div class="ipsDataItem_generic ipsDataItem_size1 cPollChoiceNumber ipsType_right ipsType_normal"><strong data-role="choiceNumber">9</strong></div><div class="ipsDataItem_main"><input type="text" name="topic_poll[questions][2][answers][9][value]" value="" class="ipsField_fullWidth"></div><div class="ipsDataItem_generic ipsDataItem_size1"><a href="#" data-action="removeChoice" class="ipsButton ipsButton_verySmall ipsButton_link ipsButton_link--negative ipsButton_narrow ipsButton_disabled ipsFaded"><i class="fa fa-times"></i></a></div></li>' +
+                                        '<li class="ipsDataItem" data-choiceid="10"><div class="ipsDataItem_generic ipsDataItem_size1 cPollChoiceNumber ipsType_right ipsType_normal"><strong data-role="choiceNumber">10</strong></div><div class="ipsDataItem_main"><input type="text" name="topic_poll[questions][2][answers][10][value]" value="" class="ipsField_fullWidth"></div><div class="ipsDataItem_generic ipsDataItem_size1"><a href="#" data-action="removeChoice" class="ipsButton ipsButton_verySmall ipsButton_link ipsButton_link--negative ipsButton_narrow ipsButton_disabled ipsFaded"><i class="fa fa-times"></i></a></div></li>' +
+                                        '<li class="ipsDataItem" data-choiceid="11"><div class="ipsDataItem_generic ipsDataItem_size1 cPollChoiceNumber ipsType_right ipsType_normal"><strong data-role="choiceNumber">11</strong></div><div class="ipsDataItem_main"><input type="text" name="topic_poll[questions][2][answers][11][value]" value="" class="ipsField_fullWidth"></div><div class="ipsDataItem_generic ipsDataItem_size1"><a href="#" data-action="removeChoice" class="ipsButton ipsButton_verySmall ipsButton_link ipsButton_link--negative ipsButton_narrow ipsButton_disabled ipsFaded"><i class="fa fa-times"></i></a></div></li>' +
+                                        '<li class="ipsDataItem" data-choiceid="12"><div class="ipsDataItem_generic ipsDataItem_size1 cPollChoiceNumber ipsType_right ipsType_normal"><strong data-role="choiceNumber">12</strong></div><div class="ipsDataItem_main"><input type="text" name="topic_poll[questions][2][answers][12][value]" value="" class="ipsField_fullWidth"></div><div class="ipsDataItem_generic ipsDataItem_size1"><a href="#" data-action="removeChoice" class="ipsButton ipsButton_verySmall ipsButton_link ipsButton_link--negative ipsButton_narrow ipsButton_disabled ipsFaded"><i class="fa fa-times"></i></a></div></li>' +
+                                        '<li class="ipsDataItem" data-choiceid="13"><div class="ipsDataItem_generic ipsDataItem_size1 cPollChoiceNumber ipsType_right ipsType_normal"><strong data-role="choiceNumber">13</strong></div><div class="ipsDataItem_main"><input type="text" name="topic_poll[questions][2][answers][13][value]" value="" class="ipsField_fullWidth"></div><div class="ipsDataItem_generic ipsDataItem_size1"><a href="#" data-action="removeChoice" class="ipsButton ipsButton_verySmall ipsButton_link ipsButton_link--negative ipsButton_narrow ipsButton_disabled ipsFaded"><i class="fa fa-times"></i></a></div></li>' +
+                                        '<li class="ipsDataItem" data-choiceid="14"><div class="ipsDataItem_generic ipsDataItem_size1 cPollChoiceNumber ipsType_right ipsType_normal"><strong data-role="choiceNumber">14</strong></div><div class="ipsDataItem_main"><input type="text" name="topic_poll[questions][2][answers][14][value]" value="" class="ipsField_fullWidth"></div><div class="ipsDataItem_generic ipsDataItem_size1"><a href="#" data-action="removeChoice" class="ipsButton ipsButton_verySmall ipsButton_link ipsButton_link--negative ipsButton_narrow ipsButton_disabled ipsFaded"><i class="fa fa-times"></i></a></div></li>' +
+                                        '<li class="ipsDataItem" data-choiceid="15"><div class="ipsDataItem_generic ipsDataItem_size1 cPollChoiceNumber ipsType_right ipsType_normal"><strong data-role="choiceNumber">15</strong></div><div class="ipsDataItem_main"><input type="text" name="topic_poll[questions][2][answers][15][value]" value="" class="ipsField_fullWidth"></div><div class="ipsDataItem_generic ipsDataItem_size1"><a href="#" data-action="removeChoice" class="ipsButton ipsButton_verySmall ipsButton_link ipsButton_link--negative ipsButton_narrow ipsButton_disabled ipsFaded"><i class="fa fa-times"></i></a></div></li>'
+            )
 
             // Question 1 Answers
             $("input[name='topic_poll[questions][1][answers][1][value]']").val("1 - Very Easy")
@@ -169,12 +185,8 @@ $(document).ready(function(){
             $("input[name='topic_poll[questions][1][answers][9][value]']").val("9")
             $("input[name='topic_poll[questions][1][answers][10][value]']").val("10 - Very Hard")
 
-            // Click Add Question
-            
             // Question 2 title
             $("input[name='topic_poll[questions][2][title]']").val("Estimated Time to " + pollType)
-
-            // Click add Choice x10
 
             // Question 2 Options
             $("input[name='topic_poll[questions][2][answers][1][value]']").val("0-29 Minutes")
@@ -193,7 +205,8 @@ $(document).ready(function(){
             $("input[name='topic_poll[questions][2][answers][14][value]']").val("500-999 Hours")
             $("input[name='topic_poll[questions][2][answers][15][value]']").val("1000+ Hours")
 
-        // Submit
+            // Submit
+            $("button[type='submit']").click();
         };
     }
 });
